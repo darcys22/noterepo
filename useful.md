@@ -13,6 +13,9 @@ python -m SimpleHTTPServer
 --Map full network fast
 nmap -F 192.168.0.1/24
 
+--filesize of folders
+du -sk * | sort -n
+
 --List Hard Disks
 fdisk -l
 
