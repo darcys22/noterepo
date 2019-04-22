@@ -1,6 +1,6 @@
 ```
 sudo apt-get update
-sudo apt-get install curl git vim
+sudo apt-get install curl git vim wget tmux
 
 ssh-keygen -t rsa -C “darcys22@gmail.com”
 eval `ssh-agent -s`
