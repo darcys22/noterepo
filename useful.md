@@ -16,6 +16,7 @@ dd bs=1M if=/path/to/MinePeon-2013-XX-XX.img of=/dev/sdX
 ### Python Webserver
 ```
 python -m SimpleHTTPServer
+python3 -m http.server
 ```
 
 ### Map full network fast
