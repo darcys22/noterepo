@@ -1,33 +1,30 @@
-#PostgreSQL
+# PostgreSQL
 
 ### Installation
 ```
 sudo apt-get install postgresql
 ```
 creates a default user called postgres which is locked down
-to login to the server
+### to login to the server
 ```
 sudo -u postgres psql
 ```
 
-#MariaDB
+# MariaDB
 
-Verify service status
---------------------
+### Verify service status
 
 ```
 sudo systemctl status mariadb
 
 ````
 
-Set Password
-------------
+### Set Password
 ```
 mysqladmin -u root password NEWPASSWORD
 ```
 
-Test the mysql connectivity
----------------------------
+### Test the mysql connectivity
 
 ```
 sudo mysql -u root -p
