@@ -1,4 +1,16 @@
-MariaDB
+#PostgreSQL
+
+### Installation
+```
+sudo apt-get install postgresql
+```
+creates a default user called postgres which is locked down
+to login to the server
+```
+sudo -u postgres psql
+```
+
+#MariaDB
 
 Verify service status
 --------------------
