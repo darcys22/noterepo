@@ -66,7 +66,7 @@ gunzip -c config.tar.gz | tar xopf -
 scp -rp sourcedirectory user@dest:/path
 ```
 
-###docker bridge ip change
+### docker bridge ip change
 ```
 docker daemon --bip 172.17.42.1/<subnet>
 ```
