@@ -1,3 +1,18 @@
+# MySQL
+
+### install
+create a password and use with `mysql -p`
+
+```
+sudo apt-get install mysql-server
+sudo service mysql start
+mysql_secure_installation
+mysql -p
+
+sudo service mysql stop
+
+````
+
 # PostgreSQL
 
 ### Installation
