@@ -8,3 +8,11 @@ zcashd -daemon -bind=[::]:8233
 ```
 zcash-cli getblockchaininfo > blockchain
 ```
+
+# Bitcoin Core 
+https://bitcoin.org/en/developer-reference#block-versions
+
+### list balances
+```
+bitcoin-cli listreceivedbyaddress 0 true
+```
