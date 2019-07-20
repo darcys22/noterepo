@@ -10,9 +10,16 @@ zcash-cli getblockchaininfo > blockchain
 ```
 
 # Bitcoin Core 
-https://bitcoin.org/en/developer-reference#block-versions
+https://bitcoin.org/en/developer-reference
 
-### list balances
+### List Balances
 ```
 bitcoin-cli listreceivedbyaddress 0 true
 ```
+
+### Dump Private Key
+```
+bitcoin-cli dumpprivkey "myaddress"
+```
+
+https://bitkey.io/
