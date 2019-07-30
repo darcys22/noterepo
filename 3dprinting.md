@@ -39,6 +39,6 @@ Use Pronterface software
 
     or the printer head will collide with the bed on the next ```G28``` command
     
-### Gcode to display location
+### GCode to display location
     m114
 
