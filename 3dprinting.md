@@ -11,7 +11,7 @@ Use Pronterface software
 1) Heat your printer up to your printing temperature and allow a few minutes for it to expand and settle
     Reset the existing Z-offset to zero
 
- ```M851 Z0```
+     ```M851 Z0```
 
 2) Home all axes
 
@@ -20,6 +20,7 @@ Use Pronterface software
 3) Move the nozzle to the middle of the bed
 
 ```G1 X110 Y110```
+
 (if your bed is 220 x 220)
     
 4) Turn off the software endstops with
