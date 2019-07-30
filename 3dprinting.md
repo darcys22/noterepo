@@ -3,9 +3,6 @@
 ### Calibrating Z axis
 https://3dprint.wiki/reprap/anet/a8/improvement/autobedleveling
 
-How to calibrate the Z axis
-
-
 Use Pronterface software
 
 1) Heat your printer up to your printing temperature and allow a few minutes for it to expand and settle
