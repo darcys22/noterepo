@@ -15,30 +15,30 @@ Use Pronterface software
 
 2) Home all axes
 
-```G28```
+    ```G28```
 
 3) Move the nozzle to the middle of the bed
 
-```G1 X110 Y110```
+    ```G1 X110 Y110```
 
-(if your bed is 220 x 220)
+    (if your bed is 220 x 220)
     
 4) Turn off the software endstops with
 
-```M211 S0```
+    ```M211 S0```
 
 5) Move the nozzle down so it is just gripping a piece of standard printer paper
     Set the Z-offset to the displayed value. E.g. if the printer displays a Z-Value of -1.23 enter
 
-```M851 Z-1.23```
+    ```M851 Z-1.23```
 
 6) Store it to the EEPROM
 
-```M500```
+    ```M500```
 
 7) Important notice! Enable the endstops again with
 
-```M211 S1```
+    ```M211 S1```
 
-or the printer head will collide with the bed on the next ```G28``` command
+    or the printer head will collide with the bed on the next ```G28``` command
 
