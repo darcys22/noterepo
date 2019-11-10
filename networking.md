@@ -10,6 +10,9 @@ https://networkjutsu.com/edgeos-cli-introduction/
 
 ### Useful Commands
 There is a operational mode `ubnt@:~$` and a configuration mode `ubnt@#`. Enter Config mode with `configure` and return with `exit`
+
+showing configuration from config mode
 ```
+ubnt@192.168.1.1:~# run show configuration
 
 ```
