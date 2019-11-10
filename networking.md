@@ -27,3 +27,8 @@ ubnt@192.168.1.1:~# compare
 ```
 ubnt@192.168.1.1:~# exit discard
 ```
+
+#### Saving changes
+```
+ubnt@192.168.1.1:~# commit
+```
