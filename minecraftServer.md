@@ -19,7 +19,7 @@ sudo apt-get install default-jdk
 ```
 
 ### Systemd service file
-/etc/systemd/system/minecraft.service
+/lib/systemd/system/minecraft.service
 ```
 [Unit]
 Description=Minecraft Server
