@@ -18,6 +18,13 @@ java -v
 sudo apt-get install default-jdk
 ```
 
+### Will need to run forge installer from the minecraft directory
+http://files.minecraftforge.net/maven/net/minecraftforge/forge/
+```
+java -jar minecraftforge-installer.jar --installServer
+```
+
+
 ### Systemd service file
 /lib/systemd/system/minecraft.service
 ```
