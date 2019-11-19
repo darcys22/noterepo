@@ -13,6 +13,7 @@ chown minecraft.minecraft -R /var/minecraft/
 ```
 
 ### Will need to install java
+JAVA 8 ONLY!
 ```
 java -v
 sudo apt-get install default-jdk
