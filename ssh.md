@@ -10,4 +10,6 @@
  disable access to specific user through ssh. On server change snode to username
  ```
  echo "DenyUsers snode" >> /etc/ssh/sshd_config
+ cat /etc/ssh/sshd_config | grep -i denyusers
+ systemctl restart sshd
  ```
