@@ -1,5 +1,8 @@
 ## Ethereum
 
+Running Geth Node
+https://medium.com/better-programming/run-an-ethereum-node-on-linux-late-2019-b37a1d35800e
+
 #### Start geth to sync
 ```
 geth --cache 2048
