@@ -46,5 +46,15 @@ mysqladmin -u root password NEWPASSWORD
 sudo mysql -u root -p
 ```
 
+# Useful SQL
 
-
+### Placeholder columns
+```
+SELECT
+    hat,
+    shoe,
+    boat,
+    0 as placeholder
+FROM
+    objects
+```
