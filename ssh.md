@@ -15,3 +15,9 @@
  cat /etc/ssh/sshd_config | grep -i denyusers
  systemctl restart sshd
  ```
+
+### Checking Authorised Keys on Server
+must be run as root
+```
+cat ~/.ssh/authorized_keys
+```
