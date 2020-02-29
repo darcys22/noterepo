@@ -5,6 +5,8 @@
  On Client Machine
  ```
  ssh-copy-id remote_username@server_ip_address
+ 
+ ssh-copy-id root@sn5.darcyfinancial.com
  ```
  
  disable access to specific user through ssh. On server change snode to username
