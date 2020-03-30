@@ -36,4 +36,4 @@ Change password authentication to no
 4) Follow the instructions and you are good to go
 5) Your ssh keys should be stored at chosed directory, the default is: /c/Users/YourUserName/.ssh/id_rsa.pub
 
-cat ~/.ssh/id_rsa.pub | ssh user@123.45.67.89 "cat >> ~/.ssh/authorized_keys"
+```cat ~/.ssh/id_rsa.pub | ssh user@123.45.67.89 "cat >> ~/.ssh/authorized_keys"```
