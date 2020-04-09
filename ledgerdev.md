@@ -8,13 +8,14 @@ https://github.com/LedgerHQ/blue-devenv/tree/master
 ```
 mkdir ledgerdev
 cd ledgerdev
+sudo apt install gcc-multilib g++-multilib git libusb-1.0-0-dev python python-pip libudev-dev
 ```
 
 ### Getting compilers
 A standard ARM gcc to build the non-secure (STM32) firmware and link the secure (ST31) applications
 https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
 ```
-wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2?revision=108bd959-44bd-4619-9c19-26187abf5225&la=en&hash=E788CE92E5DFD64B2A8C246BBA91A249CB8E2D2D
+wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2
 tar -xf gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2
 ```
 
@@ -48,12 +49,17 @@ This should be a git clone with a checkout of the relevant tag relating to the v
 ```
 git clone git@github.com:LedgerHQ/nanos-secure-sdk.git
 cd nanos-secure-sdk
-git checkout nanos-go-1601
+git fetch --all --tags --prune
+git checkout nanos-160
 ```
 link the environment variable `BOLOS_SDK` to the SDK you downloaded.
 ```
 // .profile
 export BOLOS_SDK=~/ledgerdev/nanos-secure-sdk
+
+//Dont do this but useful
+export GCCPATH=$(pwd)/
+export CLANGPATH=$(pwd)/
 ```
 
 ### Setup Python Loader
@@ -61,7 +67,7 @@ https://github.com/LedgerHQ/blue-loader-python
 ```
 sudo apt install python3-venv python3-dev libudev-dev libusb-1.0-0-dev
 
-virtualenv ledger
+python3 -m venv ledger
 source ledger/bin/activate
 pip install ledgerblue
 
@@ -70,10 +76,7 @@ pip install ledgerblue
 ### Giving permissions on udev
 
 ```
-sudo vim /etc/udev/rules.d/
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="2c97", ATTRS{idProduct}=="0000", MODE="0660", TAG+="uaccess", TAG+="udev-acl" OWNER="<UNIX username>"
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="2c97", ATTRS{idProduct}=="0001", MODE="0660", TAG+="uaccess", TAG+="udev-acl" OWNER="<UNIX username>"
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="2c97", ATTRS{idProduct}=="0004", MODE="0660", TAG+="uaccess", TAG+="udev-acl" OWNER="<UNIX username>"
+wget -q -O - https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh | sudo bash
 ```
 
 ### Sample apps to run on ledger
@@ -89,3 +92,5 @@ git clone https://github.com/LedgerHQ/ledger-app-boilerplate.git
 cd ledger-app-boilerplate/
 make load
 ```
+
+
