@@ -37,3 +37,26 @@ Change password authentication to no
 5) Your ssh keys should be stored at chosed directory, the default is: /c/Users/YourUserName/.ssh/id_rsa.pub
 
 ```cat ~/.ssh/id_rsa.pub | ssh user@123.45.67.89 "cat >> ~/.ssh/authorized_keys"```
+
+## Windows change Caps to Escape
+Download AutoHotKey
+
+save the following as an ```.ahk```file in 
+```
+%appdata%\Microsoft\Windows\Start Menu\Programs\Startup
+```
+
+```
+; Author: fwompner gmail com
+#InstallKeybdHook
+SetCapsLockState, alwaysoff
+Capslock::
+Send {LControl Down}
+KeyWait, CapsLock
+Send {LControl Up}
+if ( A_PriorKey = "CapsLock" )
+{
+    Send {Esc}
+}
+return
+```
