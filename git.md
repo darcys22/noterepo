@@ -29,3 +29,9 @@ create the new branch whilst on dev
 ```
 git checkout -b pull-request-name
 ```
+
+### Delete after pull request merged
+```
+git push -d <remote_name> <branch_name>
+git branch -d <branch_name>
+```
