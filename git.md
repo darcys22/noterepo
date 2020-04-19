@@ -22,7 +22,17 @@ create new branch for dev after checking out remote branch
 ```
 git checkout dev
 ```
+### Add upstream sources
+View current sources
+```
+git remote -v
+```
 
+Add new source:
+```
+$ git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote add upstream https://github.com/loki-project/loki-core.git
+```
 ### New Branch
 
 create the new branch whilst on dev
