@@ -1,9 +1,9 @@
-#### Generic File Information
+### Generic File Information
 ```
 file example.elf
 ```
 
-#### gdb
+### gdb
 
 Sets the format of the disassembly to look better
 ```
@@ -20,7 +20,13 @@ Log output to file
 set logging on
 ```
 
-#### ELF
+Print a string in a memory location
+https://codelearn.me/2018/02/24/show-string-in-memory.html
+```
+x /s <addr>
+```
+
+### ELF
 
 Read first 64 bytes of file
 ```
@@ -30,3 +36,10 @@ Read section headers of the elf
 ```
 readelf -s example.elf
 ```
+
+### radare2
+open with `r2 example.elf`
+enter visual mode with `V`
+navigate the mode with `p` and shift 'P'
+quit visual with `q`
+
