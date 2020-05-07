@@ -55,3 +55,10 @@ git pull upstream/dev dev
 
 git pull upstream dev
 ```
+
+### Pull upstream branch changes
+From within the branch you are working on 
+```
+git checkout pull-request-name
+git pull origin dev
+```
