@@ -49,6 +49,9 @@ git branch -d <branch_name>
 ### Pull upstream changes
 ```
 git checkout dev
+
 $ git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME
 git pull upstream/dev dev
+
+git pull upstream dev
 ```
