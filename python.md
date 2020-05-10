@@ -18,3 +18,25 @@ python should now be usable with `python --version`
 ```
 deactivate
 ```
+
+### make a python script use the virtual environment
+After activating find where the python exe is
+```
+$ which python
+/home/sean/cpp/keygenme/pyenv/bin/python
+```
+
+Put that at the top of a python script with a shebang #!
+```
+#!/home/sean/cpp/keygenme/pyenv/bin/python
+```
+
+Make execuatable
+```
+chmod +x script.py
+```  
+
+Can also be relative 
+```
+#!./pyenv/bin/python
+```
