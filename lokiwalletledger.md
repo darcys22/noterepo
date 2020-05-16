@@ -1,4 +1,6 @@
-## Linux
+## Monero
+
+### Generating Wallet
 
 This guide assumes you have already initialized your Ledger wallet and thus generated a 24 word mnemonic seed.
 
@@ -37,7 +39,7 @@ monero-wallet-cli will start refreshing. Wait until it has fully refreshed.
 
 Congratulations, you can now use your Ledger Monero wallet in conjunction with the CLI.
 
-A few final notes:
+### A few final notes:
 
 I'd strongly advise to test the full process first. That is, send a small amount to the wallet and subsequently restore it (using aforementioned guide) to verify that you can recover the wallet. Note that, upon recreating / restoring the wallet, you ought to append the --restore-height flag (with a block height before the height of your first transaction to the wallet) to the command in step 3 (Windows), step 5 (Mac OS X), or step 3 (Linux). More information about the restore height and how to approximate it can be found here.
 
@@ -57,12 +59,10 @@ You only have to use the --generate-from-device flag once (i.e. upon wallet crea
 
 If the Ledger wallet files are not in the same directory as monero-wallet-cli, you ought to open monero-wallet-cli with the --wallet-file /path/to/wallet.keys/file flag. Alternatively, you can copy the Ledger wallet files to the same directory as monero-wallet-cli.
 
-    It's imperative that the closing process of your Ledger Monero wallet is done in this specific consecutive order:
+#### It's imperative that the closing process of your Ledger Monero wallet is done in this specific consecutive order:
 
 [1] Exit monero-wallet-cli by typing exit
 
 [2] Exit the Ledger Monero app.
 
 [3] Unplug the Ledger device.
-
-    If you have any further questions or need assistance, please leave a comment in this thread.
