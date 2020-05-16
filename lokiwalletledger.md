@@ -1,12 +1,8 @@
 ## Linux
 
-We first have to ensure that we're sufficiently prepared. This entails the following:
-
 This guide assumes you have already initialized your Ledger wallet and thus generated a 24 word mnemonic seed.
 
-You need to run / use CLI v0.15.0.1, which can be found here or on the downloads page of the official website.
-
-You need to install the Ledger Monero app. In addition, you may have to add some udev-rules. A script can be found here.
+You need to install the Ledger Monero app. In addition, you may have to add some udev-rules.
 
 Your Ledger needs to be plugged in and the Ledger Monero app should be running.
 
@@ -14,7 +10,7 @@ Either your daemon (monerod) should be running and preferably be fully synced or
 
 Now that we're sufficiently prepared, let's start!
 
-1) Go to the directory / folder v0.15.0.1 monero-wallet-cli and monerod are located.
+1) Go to the directory where monero-wallet-cli and monerod are located.
 
 2) Open a new terminal.
 
