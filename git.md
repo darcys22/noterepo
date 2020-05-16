@@ -54,6 +54,7 @@ $ git pull https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git BRANCH_NAME
 git pull upstream/dev dev
 
 git pull upstream dev
+
 ```
 
 ### Pull upstream branch changes
@@ -61,4 +62,9 @@ From within the branch you are working on
 ```
 git checkout pull-request-name
 git pull origin dev
+```
+
+### Compare two files not in a repo
+```
+git diff --no-index --word-diff old_file.txt new_file.txt
 ```
