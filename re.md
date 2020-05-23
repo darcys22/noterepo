@@ -1,3 +1,5 @@
+## Linux
+
 ### Generic File Information
 ```
 file example.elf
@@ -42,4 +44,8 @@ open with `r2 example.elf`
 enter visual mode with `V`
 navigate the mode with `p` and shift 'P'
 quit visual with `q`
+
+## Windows
+
+010 editor - hex editor
 
