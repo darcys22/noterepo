@@ -8,7 +8,8 @@ https://github.com/LedgerHQ/blue-devenv/tree/master
 ```
 mkdir ledgerdev
 cd ledgerdev
-sudo apt install gcc-multilib g++-multilib git libusb-1.0-0-dev python python-pip libudev-dev
+sudo apt install gcc-multilib g++-multilib git libusb-1.0-0-dev python python-pip libudev-dev libtinfo-dev
+
 ```
 
 ### Getting compilers
