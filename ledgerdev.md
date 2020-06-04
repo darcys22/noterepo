@@ -79,6 +79,12 @@ pip install ledgerblue
 wget -q -O - https://raw.githubusercontent.com/LedgerHQ/udev-rules/master/add_udev_rules.sh | sudo bash
 ```
 
+### Test if device communicates
+
+```
+python -m ledgerblue.checkGenuine --targetId 0x31100004
+```
+
 ### Sample apps to run on ledger
 https://github.com/LedgerHQ/ledger-sample-apps
 
