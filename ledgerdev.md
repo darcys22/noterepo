@@ -55,10 +55,8 @@ git checkout nanos-160
 ```
 link the environment variable `BOLOS_SDK` to the SDK you downloaded.
 ```
-// .profile
+// ledgerdev/bin/activate
 export BOLOS_SDK=~/ledgerdev/nanos-secure-sdk
-
-//Dont do this but useful
 export GCCPATH=$(pwd)/
 export CLANGPATH=$(pwd)/
 ```
@@ -93,11 +91,6 @@ https://github.com/LedgerHQ/ledger-sample-apps
 git clone git@github.com:LedgerHQ/ledger-sample-apps.git
 ```
 
-### Boilerplate
-```
-git clone https://github.com/LedgerHQ/ledger-app-boilerplate.git
-cd ledger-app-boilerplate/
-make load
-```
-
+### Debugging setup
+https://ledger.readthedocs.io/en/latest/userspace/debugging.html
 
