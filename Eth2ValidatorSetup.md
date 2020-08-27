@@ -26,6 +26,17 @@ Save the Key somewhere safe (Note.txt in home directory)
 
 Transfer the 32 ETH to the deposit.json file generated in eth2 deposit
 
+### Get the Lighthouse Binary
+Go to releases page on github https://github.com/sigp/lighthouse/releases
+Pick the most recent release to download then symbolic link to lighthouse
+```
+wget https://github.com/sigp/lighthouse/releases/download/v0.2.7/lighthouse-v0.2.7-x86_64-unknown-linux-gnu.tar.gz
+tar -xvf lighthouse-v0.2.7-x86_64-unknown-linux-gnu.tar.gz
+
+ln -s lighthouse-v0.2.7-x86_64-unknown-linux-gnu.tar.gz lighthouse
+```
+
+
 ### Configure the Beacon Node
 
 We will run the beacon node as a service so if the system restarts the process will automatically start back up again.
@@ -45,7 +56,7 @@ $ sudo chown -R lighthousebeacon:lighthousebeacon /var/lib/lighthouse/beacon-nod
 ```
 Next, copy the newly compiled lighthouse binary to the /usr/local/bin directory. We will run it from there. Note: You will need to do this step each time you pull/build a new version of the lighthouse binary.
 ```
-$ sudo cp /$HOME/.cargo/bin/lighthouse /usr/local/bin
+$ sudo cp ~/lighthouse /usr/local/bin
 ```
 #### Create and Configure the Service
 
