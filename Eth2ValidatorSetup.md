@@ -28,12 +28,10 @@ Transfer the 32 ETH to the deposit.json file generated in eth2 deposit
 
 ### Get the Lighthouse Binary
 Go to releases page on github https://github.com/sigp/lighthouse/releases
-Pick the most recent release to download then symbolic link to lighthouse
+Pick the most recent release to download
 ```
 wget https://github.com/sigp/lighthouse/releases/download/v0.2.7/lighthouse-v0.2.7-x86_64-unknown-linux-gnu.tar.gz
 tar -xvf lighthouse-v0.2.7-x86_64-unknown-linux-gnu.tar.gz
-
-ln -s lighthouse-v0.2.7-x86_64-unknown-linux-gnu.tar.gz lighthouse
 ```
 
 
