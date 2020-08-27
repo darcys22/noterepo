@@ -1,17 +1,18 @@
-### Setting Up Ethereum 2.0 Validator
+# Setting Up Ethereum 2.0 Validator
 
-Update System
+### Update System
 ```
 $ sudo apt update && sudo apt upgrade
 $ sudo apt dist-upgrade && sudo apt autoremove
 ```
-Prepare the Validator Deposit Data
-    - Get Göerli ETH (https://faucet.goerli.mudit.blog/)
-    - Generate the validator keys. Each key is a validator account
-    - Fund the validator account(s) (32 Göerli ETH per account)
-    - Wait for your validator account(s) to become active
+### Prepare the Validator Deposit Data
+- Get Göerli ETH (https://faucet.goerli.mudit.blog/)
+- Generate the validator keys. Each key is a validator account
+- Fund the validator account(s) (32 Göerli ETH per account)
+- Wait for your validator account(s) to become active
     
-go to https://github.com/ethereum/eth2.0-deposit-cli/releases
+#### go to https://github.com/ethereum/eth2.0-deposit-cli/releases
+Pick the most recent release to download
 ```
 wget https://github.com/ethereum/eth2.0-deposit-cli/releases/download/v0.2.1/eth2deposit-cli-v0.2.1-linux-amd64.tar.gz
 tar -xvf eth2deposit-cli-v0.2.1-linux-amd64.tar.gz
@@ -21,11 +22,11 @@ cd eth2deposit
 ```
 Save the Key somewhere safe (Note.txt in home directory)
 
-Go to launchpad https://medalla.launchpad.ethereum.org/
+#### Go to launchpad https://medalla.launchpad.ethereum.org/
 
 Transfer the 32 ETH to the deposit.json file generated in eth2 deposit
 
-### Step 6 — Configure the Beacon Node
+### Configure the Beacon Node
 
 We will run the beacon node as a service so if the system restarts the process will automatically start back up again.
 Setup Accounts and Directories
@@ -46,7 +47,7 @@ Next, copy the newly compiled lighthouse binary to the /usr/local/bin directory.
 ```
 $ sudo cp /$HOME/.cargo/bin/lighthouse /usr/local/bin
 ```
-### Create and Configure the Service
+#### Create and Configure the Service
 
 Create a systemd service file to store the service config.
 ```
@@ -57,13 +58,17 @@ Paste the following into the file.
 [Unit]
 Description=Lighthouse Beacon Node
 Wants=network-online.target
-After=network-online.target[Service]
+After=network-online.target
+
+[Service]
 Type=simple
 User=lighthousebeacon
 Group=lighthousebeacon
 Restart=always
 RestartSec=5
-ExecStart=/usr/local/bin/lighthouse beacon_node --datadir /var/lib/lighthouse/beacon-node --testnet medalla --http --eth1-endpoint http://127.0.0.1:8545 --graffiti "<yourPOAPstring>"[Install]
+ExecStart=/usr/local/bin/lighthouse beacon_node --datadir /var/lib/lighthouse/beacon-node --testnet medalla --http --eth1-endpoint http://127.0.0.1:8545 --graffiti "<yourPOAPstring>"
+
+[Install]
 WantedBy=multi-user.target
 ```
 Replace <yourPOAPstring> with your Lighthouse POAP participation medal value for a special NFT prize! E.g. --graffiti "abcdefg12345saf"
@@ -95,7 +100,7 @@ The beacon-chain will begin to sync. It may take several hours for the node to f
 $ sudo journalctl -f -u lighthousebeacon.service
 ```
 
-### Step 8 — Create the Validator Wallet
+### Create the Validator Wallet
 
 The validator wallet is created by importing the keystore-m JSON files from the previous step.
 
@@ -125,8 +130,8 @@ Successfully imported 40 validators (0 skipped).WARNING: DO NOT USE THE ORIGINAL
 ```
 That’s it! Now that the validator wallet is configured we will set up the validator itself to run as a service.
 
-### Step 9 — Configure the Validator
-Setup Accounts and Directories
+### Configure the Validator
+#### Setup Accounts and Directories
 
 We will run the validator as a service so if the system restarts the process will automatically start back up again.
 
@@ -138,7 +143,7 @@ We created the data directory for the validator in the previous step: /var/lib/l
 ```
 $ sudo chown -R lighthousevalidator:lighthousevalidator /var/lib/lighthouse/validator
 ```
-Create and Configure the Service
+#### Create and Configure the Service
 
 Create a systemd service file to store the service config.
 ```
@@ -149,13 +154,17 @@ Paste the following into the file.
 [Unit]
 Description=Lighthouse Validator
 Wants=network-online.target
-After=network-online.target[Service]
+After=network-online.target
+
+[Service]
 Type=simple
 User=lighthousevalidator
 Group=lighthousevalidator
 Restart=always
 RestartSec=5
-ExecStart=/usr/local/bin/lighthouse validator_client --datadir /var/lib/lighthouse/validator[Install]
+ExecStart=/usr/local/bin/lighthouse validator_client --datadir /var/lib/lighthouse/validator
+
+[Install]
 WantedBy=multi-user.target
 ```
 We use the same lighthouse binary located in /usr/local/bin but this time we apply the validator_client subcommand, instructing it to run the validator.
