@@ -81,6 +81,7 @@ ExecStart=/usr/local/bin/lighthouse beacon_node --datadir /var/lib/lighthouse/be
 WantedBy=multi-user.target
 ```
 Replace <yourPOAPstring> with your Lighthouse POAP participation medal value for a special NFT prize! E.g. --graffiti "abcdefg12345saf"
+    https://beaconcha.in/poap
 
 The --eth1-endpoint flag defines the endpoint of the Eth1 node. If you installed one locally the value is http://127.0.0.1:8545. If you’re using a third party change the value to point to the external endpoint address.
 
