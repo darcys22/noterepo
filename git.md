@@ -68,3 +68,9 @@ git pull origin dev
 ```
 git diff --no-index --word-diff old_file.txt new_file.txt
 ```
+
+### Compare branch to original branch that would show in github pull request
+Use triple dot syntax between branches
+```
+git diff dev...hotfix-branch
+```
