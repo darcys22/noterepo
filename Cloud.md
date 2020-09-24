@@ -7,7 +7,8 @@ eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
 
-git clone git@github.com:darcys22/dev.git
+// git clone git@github.com:darcys22/dev.git
+git clone https://github.com/darcys22/dev.git
 
 ln -s ~/dev/dotfiles/vimrc .vimrc
 ln -s ~/dev/dotfiles/tmux.config .tmux.conf
