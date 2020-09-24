@@ -1,5 +1,6 @@
 ```
-sudo apt-get update
+sudo apt update && sudo apt upgrade
+sudo apt dist-upgrade && sudo apt autoremove
 sudo apt-get install curl git vim wget tmux
 
 ssh-keygen -t rsa -C “darcys22@gmail.com”
