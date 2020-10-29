@@ -39,6 +39,9 @@ Read section headers of the elf
 readelf -s example.elf
 ```
 
+Walkthrough of elf
+https://fasterthanli.me/series/making-our-own-executable-packer/part-1
+
 ### radare2
 open with `r2 example.elf`
 enter visual mode with `V`
