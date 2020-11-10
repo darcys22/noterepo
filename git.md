@@ -74,3 +74,8 @@ Use triple dot syntax between branches
 ```
 git diff dev...hotfix-branch
 ```
+
+### Clean up commit series 
+When I’m happy with the functionality in my local branch. When the bug seems to be fixed or the feature seems to be doing what it’s supposed to do and the test suite runs fine locally.
+
+I then clean up the commit series with `git rebase -i` (or if it is a single commit I can instead use just `git commit --amend`).
