@@ -84,3 +84,14 @@ I then clean up the commit series with `git rebase -i` (or if it is a single com
 ```
 git cherry -v dev hotfix-branch
 ```
+
+### Checkout Pull Requests from Github
+Fetch the reference to the pull request based on its ID number, creating a new branch in the process. Branchname can be be anything you want (Not dependant on PR details)
+```
+$ git fetch origin pull/ID/head:BRANCHNAME
+```
+Switch to the new branch that's based on this pull request:
+```
+[main] $ git checkout BRANCHNAME
+> Switched to a new branch 'BRANCHNAME'
+```
