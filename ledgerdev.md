@@ -9,7 +9,6 @@ https://github.com/LedgerHQ/blue-devenv/tree/master
 mkdir ledgerdev
 cd ledgerdev
 sudo apt install gcc-multilib g++-multilib git libusb-1.0-0-dev python python3-pip libudev-dev libtinfo-dev
-
 ```
 
 ### Getting compilers
@@ -28,7 +27,7 @@ tar -xf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 ```
 Cross compilation headers are required and provided within the gcc-multilib and g++-multilib packages. To install them on a debian system:
 ```
-sudo apt install gcc-multilib g++-multilib
+sudo apt install gcc-multilib g++-multilib libncurses5
 ```
 
 ### Download the SDK
