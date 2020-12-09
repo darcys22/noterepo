@@ -26,17 +26,6 @@ https://releases.llvm.org/download.html
 wget https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 tar -xf clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
 ```
-
-### Add compilers to PATH
-```
-// .profile
-# GCC
-PATH=~/ledgerdev/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH
-
-# Clang
-PATH=~/ledgerdev/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:$PATH
-```
-
 Cross compilation headers are required and provided within the gcc-multilib and g++-multilib packages. To install them on a debian system:
 ```
 sudo apt install gcc-multilib g++-multilib
@@ -53,13 +42,7 @@ cd nanos-secure-sdk
 git fetch --all --tags --prune
 git checkout nanos-160
 ```
-link the environment variable `BOLOS_SDK` to the SDK you downloaded.
-```
-// ledgerdev/bin/activate
-export BOLOS_SDK=~/ledgerdev/nanos-secure-sdk
-export GCCPATH=$(pwd)/
-export CLANGPATH=$(pwd)/
-```
+
 
 ### Setup Python Loader
 https://github.com/LedgerHQ/blue-loader-python
@@ -70,6 +53,26 @@ python3 -m venv ledger
 source ledger/bin/activate
 pip install ledgerblue
 
+```
+
+### Add compilers to PATH in the activate script
+```
+// ledger/bin/activate
+...
+# GCC
+PATH=~/ledgerdev/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH
+
+# Clang
+PATH=~/ledgerdev/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:$PATH
+```
+
+### link the environment variable `BOLOS_SDK` to the SDK you downloaded.
+```
+// ledgerdev/bin/activate
+...
+export BOLOS_SDK=~/ledgerdev/nanos-secure-sdk
+export GCCPATH=$(pwd)/
+export CLANGPATH=$(pwd)/
 ```
 
 ### Giving permissions on udev
