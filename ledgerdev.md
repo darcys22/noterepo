@@ -71,8 +71,10 @@ PATH=~/ledgerdev/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin:$PATH
 // ledgerdev/bin/activate
 ...
 export BOLOS_SDK=~/ledgerdev/nanos-secure-sdk
-export GCCPATH=$(pwd)/
-export CLANGPATH=$(pwd)/
+export GCCPATH=/home/sean/ledgerdev/gcc-arm-none-eabi-9-2019-q4-major/bin/
+export CLANGPATH=/home/sean/ledgerdev/clang+llvm-10.0.0-x86_64-linux-gnu-ubuntu-18.04/bin/
+//export GCCPATH=$(pwd)/
+//export CLANGPATH=$(pwd)/
 ```
 
 ### Giving permissions on udev
