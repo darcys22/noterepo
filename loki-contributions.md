@@ -59,3 +59,9 @@ continue pushing with `git push origin pull-request-name` as you make changes an
 git push -d origin pull-request-name
 git branch -d pull-request-name
 ```
+
+### Set up service node
+```
+ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 23023
+ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
+```
