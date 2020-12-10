@@ -95,3 +95,11 @@ Switch to the new branch that's based on this pull request:
 [main] $ git checkout BRANCHNAME
 > Switched to a new branch 'BRANCHNAME'
 ```
+
+### View Coworkers gits
+```
+git remote add coworker git://coworkersUsername/repo.git
+git fetch coworker 
+git branch --all # choose a branch
+git checkout --track -b aBranch coworker/aBranch
+```
