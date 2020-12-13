@@ -94,6 +94,11 @@ https://github.com/LedgerHQ/ledger-sample-apps
 ```
 git clone git@github.com:LedgerHQ/ledger-sample-apps.git
 ```
+### Compile and load
+```
+make clean && make DEBUG=1 -j12 load
+```
+
 
 ### Debugging setup
 https://ledger.readthedocs.io/en/latest/userspace/debugging.html
