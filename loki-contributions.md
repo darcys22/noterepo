@@ -70,3 +70,8 @@ ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-
 ```
 /utils/lmq-rpc.py ipc://$HOME/.loki/testnet/lokid.sock 'admin.lokinet_ping' '{"version":[0,8,3]}'
 ```
+
+### SS ping
+```
+/utils/lmq-rpc.py ipc://$HOME/.loki/testnet/lokid.sock 'admin.storage_server_ping' '{"version_major":2,"version_minor":1,"version_path":1}'
+```
