@@ -3,13 +3,13 @@
 ## Configure Timekeeping
 
 Ubuntu has time synchronization built in and activated by default using systemd’s timesyncd service. Verify it’s running correctly.
-
+```
 $ timedatectl
-
+```
 The NTP service should be active. If not then run:
-
+```
 $ sudo timedatectl set-ntp on
-
+```
 ## Change time
 
 Since systemd was introducted in Ubuntu, the correct way is:
