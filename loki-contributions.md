@@ -65,3 +65,8 @@ git branch -d pull-request-name
 ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 23023
 ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
 ```
+
+### Lokinet ping
+```
+/utils/lmq-rpc.py ipc://$HOME/.loki/testnet/lokid.sock 'admin.lokinet_ping' '{"version":[0,8,3]}'
+```
