@@ -28,5 +28,5 @@ This also works with e.g. `sudo date --set="+2 hours"`, which is exactly what I 
 
 ## Setting time zones
 ```
-Setting time zones: timedatectl set-timezone America/New_York 
+Setting time zones: timedatectl set-timezone Australia/Melbourne 
 ```
