@@ -60,6 +60,18 @@ git push -d origin pull-request-name
 git branch -d pull-request-name
 ```
 
+### Linux Build
+
+build:
+```
+cd loki-core
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+make -j$(nproc)
+```
+
+
 ### Set up service node
 ```
 ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 23023
