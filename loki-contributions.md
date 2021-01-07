@@ -67,7 +67,7 @@ build:
 cd loki-core
 mkdir build
 cd build
-cmake -DCMAKE_BUILD_TYPE=Debug ..
+cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON ..
 make -j$(nproc)
 ```
 
