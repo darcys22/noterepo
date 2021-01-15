@@ -70,3 +70,14 @@ scp -rp sourcedirectory user@dest:/path
 ```
 docker daemon --bip 172.17.42.1/<subnet>
 ```
+
+### CTags to search for files
+go to a project root using after installing ctags with `apt install exuberant-ctags`
+```
+ctags -R *
+```
+Which will creates a tags file listing all the definitions. Then you can search the tags in vim using
+```
+vim -t <tag>
+```
+A tag being the definition being searched for. This can also be achieved in vim itself using `Ctrl-]`
