@@ -88,5 +88,7 @@ ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-
 /utils/lmq-rpc.py ipc://$HOME/.loki/testnet/lokid.sock 'admin.storage_server_ping' '{"version_major":2,"version_minor":1,"version_path":1}'
 ```
 
-Download bc
+### Download Blockchain
+```
 sudo -u _loki curl https://imaginary.stream/loki/data.mdb --output /var/lib/loki/lmdb/data.mdb
+```
