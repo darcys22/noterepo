@@ -81,3 +81,8 @@ Which will creates a tags file listing all the definitions. Then you can search 
 vim -t <tag>
 ```
 A tag being the definition being searched for. This can also be achieved in vim itself using `Ctrl-]`
+
+### Hard disk space unix
+```
+ncdu
+```
