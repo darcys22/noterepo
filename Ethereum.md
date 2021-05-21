@@ -35,3 +35,10 @@ setInterval(function(){
     lastPercentage = percentage;lastBlocksToGo = blocksToGo;
 },timeInterval);
 ```
+
+
+## Development
+
+```
+npm i -g hardhat-shorthand
+```
