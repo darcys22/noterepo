@@ -86,3 +86,8 @@ A tag being the definition being searched for. This can also be achieved in vim 
 ```
 ncdu
 ```
+
+### Set default c++ compiler
+```
+sudo update-alternatives --config c++
+```
