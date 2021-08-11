@@ -15,6 +15,9 @@ ln -s ~/dev/dotfiles/vimrc .vimrc
 ln -s ~/dev/dotfiles/tmux.config .tmux.conf
 ln -s ~/dev/vim/ .vim
 
+mkdir ./.config/nvim
+ln -s ~/dev/nvim/init.vim ~/.config/nvim/init.vim
+
 sudo apt-get install build-essential openssl curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config
 
 ```
