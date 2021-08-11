@@ -4,6 +4,11 @@ Don't use xmodmap. It's a trap!
 Install xcape `sudo apt install xcape`
 
 Use gnome-tweaks to turn capslock into control
+
+13.10+:
+
+Install and use gnome-tweak-tool > Keyboard & Mouse > Keyboard > Additional Layout Options > Caps Lock behavior.
+
 ```
 sudo apt install gnome-tweaks
 gnome-tweaks
