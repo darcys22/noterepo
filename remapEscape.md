@@ -9,6 +9,8 @@ Use gnome-tweaks to turn capslock into control
 
 Install and use gnome-tweak-tool > Keyboard & Mouse > Keyboard > Additional Layout Options > Caps Lock behavior.
 
+"Caps lock is also a control"
+
 ```
 sudo apt install gnome-tweaks
 gnome-tweaks
