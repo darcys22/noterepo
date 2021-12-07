@@ -33,3 +33,18 @@ cmake ..
 ```
 make
 ```
+
+### Running clang tidy
+Get a config from somewhere like this:
+https://github.com/googleapis/google-cloud-cpp/blob/main/.clang-tidy
+
+save as .clang-tidy which will be the config
+
+or can run with it specified as so
+```
+clang-tidy --fix -checks='-*,readability-identifier-naming' \
+    -config="{CheckOptions: [ {key: readability-identifier-naming.FunctionCase, value: lower_case} ]}" \
+    mycode.c -- -std=c17
+```
+
+But if the .clang-tidy is there you can just ignore the --config param
