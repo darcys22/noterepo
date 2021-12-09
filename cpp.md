@@ -34,6 +34,19 @@ cmake ..
 make
 ```
 
+### Getting assembly
+objectbump -s | less
+
+### analyse perf
+Linux perf
+
+### What is GLIBC
+https://stackoverflow.com/questions/11460782/what-is-glibc-what-is-it-used-for
+```
+git clone git://sourceware.org/git/glibc.git
+```
+
+
 ### Running clang tidy
 Get a config from somewhere like this:
 https://github.com/googleapis/google-cloud-cpp/blob/main/.clang-tidy
