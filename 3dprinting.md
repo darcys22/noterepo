@@ -42,3 +42,18 @@ Use Pronterface software
 ### GCode to display location
     m114
 
+
+### Hole offsets for screws
+M2 = 2mm OD of screw. M3 = 3mm OD of screw.
+
+If you want to make it smaller use these sizes and tap. Make sure there is 3 or 4 layers in wall
+https://www.boltdepot.com/fastener-information/Metric-Tap-Drill-Size.aspx
+
+However if you want to make it bigger use the following fits:
+```
+Desired Fit     Clearance Gap (mm)
+Press Fit 	    Line to Line
+Tight Fit 	    0.127
+Normal Fit 	    0.254
+Loose Fit 	    0.508
+```
