@@ -90,5 +90,5 @@ ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-
 
 ### Download Blockchain
 ```
-sudo -u _loki curl https://imaginary.stream/loki/data.mdb --output /var/lib/loki/lmdb/data.mdb
+sudo -u _loki curl https://public.loki.foundation/loki/data.mdb --output /var/lib/oxen/lmdb/data.mdb
 ```
