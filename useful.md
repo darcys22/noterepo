@@ -91,3 +91,8 @@ ncdu
 ```
 sudo update-alternatives --config c++
 ```
+
+### Truncate syslog
+```
+truncate -s 0 /var/log/syslog
+```
