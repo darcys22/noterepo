@@ -4,6 +4,7 @@ https://ethernaut.openzeppelin.com/
 ## Completed
 0. Hello Ethernaut
 1. Fallback
+2. Fallout
 
 ## Other useful sites:
 
