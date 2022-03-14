@@ -5,6 +5,7 @@ https://ethernaut.openzeppelin.com/
 0. Hello Ethernaut
 1. Fallback
 2. Fallout
+3. CoinFlip
 
 ## Other useful sites:
 
