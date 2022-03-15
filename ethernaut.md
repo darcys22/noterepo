@@ -6,6 +6,9 @@ https://ethernaut.openzeppelin.com/
 1. Fallback
 2. Fallout
 3. CoinFlip
+4. Telephone ✔
+5. Token ✔
+6. Delegation ✔
 
 ## Other useful sites:
 
