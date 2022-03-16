@@ -14,12 +14,15 @@ https://ethernaut.openzeppelin.com/
 9. King ✔
 10. Re-entrancy ✔
 11. Elevator ✔
+12. Privacy ✔
 
 ## Other useful sites:
 
 https://www.pauric.blog/How-To-Hack-Ethereum-Contracts-The-Easy-Way/
 
 https://trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts
+
+https://medium.com/aigang-network/how-to-read-ethereum-contract-storage-44252c8af925
 
 ## Other Notes:
 
