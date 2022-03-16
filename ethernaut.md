@@ -9,6 +9,9 @@ https://ethernaut.openzeppelin.com/
 4. Telephone ✔
 5. Token ✔
 6. Delegation ✔
+7. Force ✔
+8. Vault ✔
+9. King ✔
 
 ## Other useful sites:
 
@@ -48,3 +51,8 @@ contract.sendTransction({value: 50000000});
   await contract.sendTransaction({data: web3.eth.abi.encodeFunctionSignature("pwn()")})
   
 ```
+
+### Sending Ether
+https://solidity-by-example.org/sending-ether/
+
+
