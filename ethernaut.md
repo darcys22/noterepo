@@ -2,16 +2,18 @@
 https://ethernaut.openzeppelin.com/
 
 ## Completed
-0. Hello Ethernaut
-1. Fallback
-2. Fallout
-3. CoinFlip
+0. Hello Ethernaut ✔
+1. Fallback ✔
+2. Fallout ✔
+3. CoinFlip ✔
 4. Telephone ✔
 5. Token ✔
 6. Delegation ✔
 7. Force ✔
 8. Vault ✔
 9. King ✔
+10. Re-entrancy ✔
+11. Elevator ✔
 
 ## Other useful sites:
 
@@ -54,5 +56,8 @@ contract.sendTransction({value: 50000000});
 
 ### Sending Ether
 https://solidity-by-example.org/sending-ether/
+
+### Re-Entrancy!!
+https://solidity-by-example.org/hacks/re-entrancy/
 
 
