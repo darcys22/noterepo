@@ -96,3 +96,9 @@ sudo update-alternatives --config c++
 ```
 truncate -s 0 /var/log/syslog
 ```
+
+### tar.gz a folder
+Run tar command to create an archived named file.tar.gz for given directory name by running:
+```
+tar -czvf file.tar.gz directory
+```
