@@ -134,4 +134,7 @@ git commit -m "Squashed changes from original_messy_branch"
 ```
 
 ### Push a different branch to origin
+```
 git push <remote> <source branch>:<dest branch> 
+git push origin cleaned-up-branch:original-branch-on-PR
+```
