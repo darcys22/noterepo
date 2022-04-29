@@ -118,3 +118,20 @@ git rebase dev
 - It will give you the opportunity to change the commit message.
 - Save and close the editor again.
 - Then you have to force push the final, squashed commit: `git push --force-with-lease origin`.
+
+### Clean messy branch
+```
+# create a new branch
+git checkout -b new_clean_branch
+
+# apply all changes
+git merge original_messy_branch
+
+# forget the commits but have the changes staged for commit
+git reset --soft main        
+
+git commit -m "Squashed changes from original_messy_branch"
+```
+
+### Push a different branch to origin
+git push <remote> <source branch>:<dest branch> 
