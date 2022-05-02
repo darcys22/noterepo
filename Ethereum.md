@@ -42,3 +42,7 @@ setInterval(function(){
 ```
 npm i -g hardhat-shorthand
 ```
+
+### convert a contract into an interface
+1. `forge inspect CONTRACT abi > abi.json`
+2. `cast interface abi.json > IFace.sol`
