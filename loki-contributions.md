@@ -92,3 +92,8 @@ ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-
 ```
 sudo -u _loki curl https://public.loki.foundation/loki/data.mdb --output /var/lib/oxen/lmdb/data.mdb
 ```
+
+### Compile Tests Faster
+```
+cmake .. -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Debug -DUSE_LTO=OFF
+```
