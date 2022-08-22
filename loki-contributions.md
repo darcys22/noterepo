@@ -71,6 +71,11 @@ cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON ..
 make -j$(nproc)
 ```
 
+### Windows cross compile build
+If you want to do a windows build from your local linux box, install g++-mingw-w64-x86-64, and then build with
+```
+cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/64-bit-toolchain.cmake -DBUILD_STATIC_DEPS=ON -DARCH=x86-64
+```
 
 ### Set up service node
 ```
