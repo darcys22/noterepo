@@ -28,9 +28,14 @@ git checkout dev
 ```
 
 **6) Compile the sources**
+create a build directory, call cmake and build
+
 from the root directory call:
 ```
-make
+mkdir build
+cd build
+cmake ..
+make -j16
 ```
 
 ## Create a new branch to work on
