@@ -65,10 +65,10 @@ git push -d origin pull-request-name
 git branch -d pull-request-name
 ```
 
-### Version Bump
+## Version Bump
 https://github.com/oxen-io/oxen-core/pull/1589/commits/ca5de63dbfbb09777d46e56d0bb98d2515ca30ec
 
-### Linux Build
+## Linux Build
 
 build:
 ```
@@ -79,34 +79,34 @@ cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON ..
 make -j$(nproc)
 ```
 
-### Windows cross compile build
+## Windows cross compile build
 If you want to do a windows build from your local linux box, install g++-mingw-w64-x86-64, and then build with
 ```
 cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/64-bit-toolchain.cmake -DBUILD_STATIC_DEPS=ON -DARCH=x86-64
 ```
 
-### Set up service node
+## Set up service node
 ```
 ExecStart=/home/snode/loki/lokid --non-interactive --service-node --service-node-public-ip SERVERIP --storage-server-port 23023
 ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-key  /home/snode/.loki/key
 ```
 
-### Lokinet ping
+## Lokinet ping
 ```
 /utils/lmq-rpc.py ipc://$HOME/.loki/testnet/lokid.sock 'admin.lokinet_ping' '{"version":[0,8,3]}'
 ```
 
-### SS ping
+## SS ping
 ```
 /utils/lmq-rpc.py ipc://$HOME/.loki/testnet/lokid.sock 'admin.storage_server_ping' '{"version_major":2,"version_minor":1,"version_path":1}'
 ```
 
-### Download Blockchain
+## Download Blockchain
 ```
 sudo -u _loki curl https://public.loki.foundation/loki/data.mdb --output /var/lib/oxen/lmdb/data.mdb
 ```
 
-### Compile Tests Faster
+## Compile Tests Faster
 ```
 cmake .. -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=Debug -DUSE_LTO=OFF
 ```
