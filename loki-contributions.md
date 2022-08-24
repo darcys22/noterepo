@@ -60,6 +60,9 @@ git push -d origin pull-request-name
 git branch -d pull-request-name
 ```
 
+### Version Bump
+https://github.com/oxen-io/oxen-core/pull/1589/commits/ca5de63dbfbb09777d46e56d0bb98d2515ca30ec
+
 ### Linux Build
 
 build:
