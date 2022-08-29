@@ -102,3 +102,13 @@ Run tar command to create an archived named file.tar.gz for given directory name
 ```
 tar -czvf file.tar.gz directory
 ```
+
+### Check io speeds of disks
+```
+sudo hdparm -Tt /dev/sdX 
+```
+(for read/write) or 
+``
+dd if=/dev/zero of=/tmp/output conv=fdatasync bs=384k count=1k; rm -f /tmp/output 
+```
+(for write (but even better if you do it on the same drive as the datadir, instead of /tmp))
