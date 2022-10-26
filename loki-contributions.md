@@ -102,7 +102,10 @@ ExecStart=/home/snode/loki-storage 0.0.0.0 23023 --lokid-rpc-port 22023 --lokid-
 ```
 
 ## Download Blockchain
+use in tmux so it can download while you are not sshd in
 ```
+sudo oxend-download-lmdb https://public.loki.foundation/loki/data.mdb
+OR
 sudo -u _loki curl https://public.loki.foundation/loki/data.mdb --output /var/lib/oxen/lmdb/data.mdb
 ```
 
