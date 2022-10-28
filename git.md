@@ -138,3 +138,9 @@ git commit -m "Squashed changes from original_messy_branch"
 git push <remote> <source branch>:<dest branch> 
 git push origin cleaned-up-branch:original-branch-on-PR
 ```
+
+### Git add submodule to specified dir with branch
+```
+git submodule add -b stable https://github.com/pybind/pybind11 external/pybind11
+```
+
