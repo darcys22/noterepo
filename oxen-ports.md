@@ -48,7 +48,7 @@ public.loki.foundation -> has both mainnet and testnet endpoints for wallets run
 
 #### mainnet
 ```
-public.loki.foundation:22023
+--daemon-address public-na.optf.ngo:22023
 ```
 
 #### testnet
