@@ -60,3 +60,6 @@ if ( A_PriorKey = "CapsLock" )
 }
 return
 ```
+
+## secure server
+https://pboyd.io/posts/securing-a-linux-vm/
