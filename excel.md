@@ -30,6 +30,11 @@ Previous Year: =DATE(YEAR(Year_Cell)-1,MONTH(Year_Cell),DAY(Year_Cell))
 Next Year: =DATE(YEAR(Year_Cell)+1,MONTH(Year_Cell),DAY(Year_Cell)) 
 ```
 
+Take a date and return the FY
+```
+=IF(MONTH(Date_Cell)<6,YEAR(Date_Cell),YEAR(Date_Cell)+1)
+```
+
 Formatting
 ```
 dd mmmm yyyy
