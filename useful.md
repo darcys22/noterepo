@@ -86,6 +86,10 @@ A tag being the definition being searched for. This can also be achieved in vim 
 ```
 ncdu
 ```
+find largest directories
+```
+du --max-depth=1 /path | sort -r -k1,1n
+```
 
 ### Set default c++ compiler
 ```
