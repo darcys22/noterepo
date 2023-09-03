@@ -26,6 +26,14 @@ sudo su postgres
 sudo -u postgres psql
 ```
 
+### update permissions for user
+```
+booster=# grant connect on database booster to magicbot;
+GRANT
+booster=# grant pg_write_all_data to magicbot;
+GRANT ROLE
+```
+
 # MariaDB
 
 ### Verify service status
