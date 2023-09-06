@@ -28,11 +28,14 @@ sudo -u postgres psql
 
 ### update permissions for user
 ```
-booster=# grant connect on database booster to magicbot;
+booster=# GRANT CONNECT ON DATABASE booster to magicbot;                                                          
+GRANT 
+booster=# GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public to magicbot;                                        
+GRANT                                                                                                             
+booster=# GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public to magicbot;                                     
 GRANT
-booster=# grant pg_write_all_data to magicbot;
-GRANT ROLE
 ```
+The rub is that if you create tables in schemas outside the default "public" schema, this GRANT won't apply to them. If you do use non-public schemas, you'll have to GRANT the privileges to those schemas separately.
 
 # MariaDB
 
