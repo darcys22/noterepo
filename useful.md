@@ -116,3 +116,8 @@ sudo hdparm -Tt /dev/sdX
 dd if=/dev/zero of=/tmp/output conv=fdatasync bs=384k count=1k; rm -f /tmp/output 
 ```
 (for write (but even better if you do it on the same drive as the datadir, instead of /tmp))
+
+### Check what hard disks are mounted and where
+```
+sudo df -a -T -h
+```
