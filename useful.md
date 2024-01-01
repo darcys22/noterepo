@@ -112,7 +112,7 @@ tar -czvf file.tar.gz directory
 sudo hdparm -Tt /dev/sdX 
 ```
 (for read/write) or 
-``
+```
 dd if=/dev/zero of=/tmp/output conv=fdatasync bs=384k count=1k; rm -f /tmp/output 
 ```
 (for write (but even better if you do it on the same drive as the datadir, instead of /tmp))
