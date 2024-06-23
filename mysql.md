@@ -53,6 +53,10 @@ postgres=# grant all privileges on all sequences in schema public to therapybot;
 GRANT
 postgres=# grant usage on schema public to therapybot;
 GRANT
+postgres=# grant pg_read_all_data to therapybot;
+GRANT ROLE
+postgres=# grant pg_write_all_data to therapybot;
+GRANT ROLE
 ```
 # MariaDB
 
