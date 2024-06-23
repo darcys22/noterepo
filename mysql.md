@@ -39,6 +39,21 @@ GRANT
 ```
 The rub is that if you create tables in schemas outside the default "public" schema, this GRANT won't apply to them. If you do use non-public schemas, you'll have to GRANT the privileges to those schemas separately.
 
+### create a new user and table and allow access
+```
+postgres=# create user therapybot;
+CREATE ROLE
+postgres=# create database therapy;
+CREATE DATABASE
+postgres=# grant connect on database therapy to therapybot;
+GRANT
+postgres=# grant all privileges on all tables in schema public to therapybot;
+GRANT
+postgres=# grant all privileges on all sequences in schema public to therapybot;
+GRANT
+postgres=# grant usage on schema public to therapybot;
+GRANT
+```
 # MariaDB
 
 ### Verify service status
