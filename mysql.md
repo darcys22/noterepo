@@ -63,6 +63,10 @@ to allow remote connections you also have to add
 hostssl all             therapybot      0.0.0.0/0               scram-sha-256
 ```
 to `/etc/postgresql/14/main/pg_hba.conf`
+after editing you need to
+```
+sudo systemctl reload postgresql
+```
 # MariaDB
 
 ### Verify service status
