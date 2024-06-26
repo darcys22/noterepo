@@ -58,6 +58,11 @@ GRANT ROLE
 postgres=# grant pg_write_all_data to therapybot;
 GRANT ROLE
 ```
+to allow remote connections you also have to add
+```
+hostssl all             therapybot      0.0.0.0/0               scram-sha-256
+```
+to `/etc/postgresql/14/main/pg_hba.conf`
 # MariaDB
 
 ### Verify service status
