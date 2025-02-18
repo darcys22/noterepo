@@ -5,8 +5,8 @@ sudo apt-get install curl git vim wget tmux
 
 ssh-keygen -t ed25519 -C “darcys22@gmail.com”
 eval `ssh-agent -s`
-ssh-add ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
 
 // git clone git@github.com:darcys22/dev.git
 git clone https://github.com/darcys22/dev.git
