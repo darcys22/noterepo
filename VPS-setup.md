@@ -52,7 +52,8 @@ LoginGraceTime 60
 
 **5. Restart SSH service:**
 ```bash
-sudo systemctl restart sshd
+sudo systemctl daemon-reload
+sudo systemctl restart ssh
 # Test connection on new port: ssh -p 2222 username@your_server_ip
 ```
 
