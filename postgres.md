@@ -1,3 +1,13 @@
+## Connect to the database
+```
+psql -h <endpoint> -p <port> -U <username>
+```
+for amazon RDS, master username is usually `postgres` and port is usually `5432`
+
+When setting up you need to make sure that
+1) Database is publically accessable
+2) the security group allows for inbound tcp traffic
+
 Here's the production-ready setup for your webapp user and database:
 
 **1. Create the Database**:
